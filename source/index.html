@@ -17,37 +17,37 @@
   <header class="page-header">
     <div class="page-header__wrapper">
       <div class="page-header__info">
-        <a href="#" aria-label="Логотип сайта">
-          <picture>
-            <source media="(max-width: 767px)" srcset="img/logo-mobile.svg">
-            <img src="img/logo-desktop.svg" width="202" height="52" alt="Логотип Smart Device">
-          </picture>
-        </a>
-        <ul>
-          <li>
-            <a class="page-header__link page-header__link--email" href="mailto:info@sd.ru"
-              aria-label="адрес электронной почты">
-              <!-- TODO: вставить svg значок письма -->
-              <span>info@sd.ru</span>
-            </a>
-          </li>
-          <li>
-            <a class="page-header__link page-header__link--phone" href="tel:+74950005252"
-              aria-label="номер телефона">
-              <!-- TODO: вставить svg значок телефона -->
-              <span>+7&nbsp;(495)&nbsp;000&nbsp;52&nbsp;52</span>
-            </a>
-          </li>
-        </ul>
-        <a href="#" aria-label="кнопка заказать звонок">Заказать звонок</a>
+        <div class="page-header__logo">
+          <a href="#" aria-label="Логотип сайта">
+            <picture>
+              <source media="(max-width: 767px)" srcset="img/logo-mobile.svg">
+              <img src="img/logo-desktop.svg" width="202" height="52" alt="Логотип Smart Device">
+            </picture>
+          </a>
+        </div>
+        <div class="page-header__contacts">
+          <a class="page-header__link page-header__link--email" href="mailto:info@sd.ru"
+            aria-label="адрес электронной почты">
+            <!-- TODO: вставить svg значок письма -->
+            <span>info@sd.ru</span>
+          </a>
+          <a class="page-header__link page-header__link--phone" href="tel:+74950005252" aria-label="номер телефона">
+            <!-- TODO: вставить svg значок телефона -->
+            <span>+7&nbsp;(495)&nbsp;000&nbsp;52&nbsp;52</span>
+          </a>
+          <a class="page-header__order-call" href="#" aria-label="кнопка заказать звонок">Заказать звонок</a>
+        </div>
       </div>
-      <div class="page-header__promo">
-        <h1>Печатные платы</h1>
-        <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
-        <a class="page-header__button" href="#callback" aria-label="Переход в раздел обратной связи">Получить бесплатную
-          консультацию</a>
-        <a class="page-header__button page-header__button--mobile" href="#callback"
-          aria-label="Переход в раздел обратной связи">Бесплатная консультация</a>
+      <div class="page-header__promo header-promo">
+        <div class="header-promo__details">
+          <h1>Печатные платы</h1>
+          <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
+          <a class="header-promo__button" href="#callback" aria-label="Переход в раздел обратной связи">Получить
+            бесплатную
+            консультацию</a>
+          <a class="header-promo__button header-promo__button--mobile" href="#callback"
+            aria-label="Переход в раздел обратной связи">Бесплатная консультация</a>
+        </div>
         <picture>
           <source media="(max-width: 767px)" type="image/webp"
             srcset="img/board-mobile@1x.webp 1x, img/board-mobile@2x.webp 2x">
@@ -57,7 +57,6 @@
             alt="Изображение печатных плат">
         </picture>
       </div>
-
     </div>
   </header>
   <main class="page-main">

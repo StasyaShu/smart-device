@@ -1,0 +1,55 @@
+.header-promo {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header-promo__details {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-end;
+}
+
+.header-promo__details h1 {
+  display: block;
+  margin: 0;
+  padding: 0;
+  font-size: 80px;
+  line-height: 94px;
+  text-transform: uppercase;
+  color: $white;
+  max-width: 638px;
+
+  @include roboto-bold;
+}
+
+.header-promo__details p {
+  display: block;
+  margin: 0 0 0 90px;
+  padding: 0;
+  font-size: 22px;
+  line-height: 34px;
+  color: $white;
+  max-width: 638px;
+
+  @include ptmono;
+}
+
+.header-promo__button {
+  display: block;
+  margin: 0 0 0 90px;
+  padding: 14px 30px;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: uppercase;
+  color: $white;
+  width: 400px;
+  border-radius: 5px;
+  background-color: $blue;
+  text-align: center;
+
+  @include roboto-bold;
+}
+
+.header-promo__button--mobile {
+  display: none;
+}
