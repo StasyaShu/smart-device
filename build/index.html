@@ -7,18 +7,140 @@
   <meta name="description" content="Тренировочный проект от HTML Academy: Smart Device. Выполнила студент Шулепова С.В.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="css/style.min.css" rel="stylesheet">
+  <link rel="preload" href="fonts/ptmono.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="fonts/robotocondensed.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="fonts/robotocondensedbold.woff2" as="font" type="font/woff2" crossorigin="">
 </head>
 
-<body>
-  <header>
-    <div><p>Hello!</p></div>
+<body class="page__body">
+  <header class="page-header">
+    <div class="page-header__wrapper">
+      <div class="page-header__info">
+        <a href="#" aria-label="Логотип сайта">
+          <picture>
+            <source media="(max-width: 767px)" srcset="img/logo-mobile.svg">
+            <img src="img/logo-desktop.svg" width="202" height="52" alt="Логотип Smart Device">
+          </picture>
+        </a>
+        <ul>
+          <li>
+            <a class="page-header__link page-header__link--email" href="mailto:info@sd.ru" aria-label="адрес электронной почты">
+              <!-- TODO: вставить svg значок письма -->
+              <span>info@sd.ru</span>
+            </a>
+          </li>
+          <li>
+            <a class="page-header__link page-header__link--phone" href="tel:+74950005252" aria-label="номер телефона">
+              <!-- TODO: вставить svg значок телефона -->
+              <span>+7&nbsp;(495)&nbsp;000&nbsp;52&nbsp;52</span>
+            </a>
+          </li>
+        </ul>
+        <a href="#" aria-label="кнопка заказать звонок">Заказать звонок</a>
+      </div>
+      <div class="page-header__promo">
+        <h1>Печатные платы</h1>
+        <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
+        <a class="page-header__button" href="#callback" aria-label="Переход в раздел обратной связи">Получить бесплатную
+          консультацию</a>
+        <a class="page-header__button page-header__button--mobile" href="#callback" aria-label="Переход в раздел обратной связи">Бесплатная консультация</a>
+        <picture>
+          <source media="(max-width: 767px)" type="image/webp" srcset="img/board-mobile@1x.webp 1x, img/board-mobile@2x.webp 2x">
+          <source media="(max-width: 1023px)" type="image/webp" srcset="img/board-tablet@1x.webp 1x, img/board-tablet@2x.webp 2x">
+          <img src="img/board-desktop@1x.png" srcset="img/board-desktop@2x.png 2x" width="705" height="515" alt="Изображение печатных плат">
+        </picture>
+      </div>
 
+    </div>
   </header>
-  <main>
+  <main class="page-main">
+    <h1 class="visually-hidden">Онлайн магазин печатных плат</h1>
 
   </main>
-  <footer>
-
+  <footer class="page-footer">
+    <section class="page-footer__promo">
+      <h2 class="visually-hidden">Мы в социальных сетях</h2>
+      <div class="page-footer__promo-wrapper">
+        <a href="#" aria-label="Логотип сайта">
+          <img src="img/logo-footer-desktop.svg" width="216" height="52" alt="Логотип Service Device">
+        </a>
+        <span>1999-2018 SD Service Devices</span>
+        <ul>
+          <li>
+            <a href="https://www.facebook.com/" aria-label="Иконка-ссылка на сайт Фэйсбук">
+              <!-- TODO: вставить svg иконку facebook -->
+            </a>
+          </li>
+          <li>
+            <a href="https://ok.ru/" aria-label="Иконка-ссылка на сайт Одноклассники">
+              <!-- TODO: вставить svg иконку ok -->
+            </a>
+          </li>
+          <li>
+            <a href="https://vk.com/" aria-label="Иконка-ссылка на сайт Вконтакте">
+              <!-- TODO: вставить svg иконку vk -->
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="page-footer__navigation">
+      <h2 class="visually-hidden">Разделы нашего сайта</h2>
+      <div class="page-footer__navigation-wrapper" id="accordion">
+        <h3>Разделы сайта</h3>
+        <div id="tabs-1">
+          <ul>
+            <li>
+              <a href="#">О компании</a>
+            </li>
+            <li>
+              <a href="#">Продукты</a>
+            </li>
+            <li>
+              <a href="#">Производство печатных плат</a>
+            </li>
+            <li>
+              <a href="#">Монтаж печатных плат</a>
+            </li>
+            <li>
+              <a href="#">Комплектующие</a>
+            </li>
+            <li>
+              <a href="#">Доставка</a>
+            </li>
+            <li>
+              <a href="#">Контакты</a>
+            </li>
+          </ul>
+        </div>
+        <h3>Наш офис</h3>
+        <div id="tabs-2">
+          <ul>
+            <li>
+              <p>г. Мытищи, Олимпийский проспект, д.10</p>
+            </li>
+            <li>
+              <p>+7 (495) 589-40-50</p>
+            </li>
+            <li>
+              <p>+7 (925) 003-87-67</p>
+            </li>
+            <li>
+              <p>+7 (926) 926-080-79</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="page-footer__copyright">
+      <h2 class="visually-hidden">Авторские права</h2>
+      <div class="page-footer__copyright-wrapper">
+        <span>Все права защищены</span>
+        <span>1999-2018 SD Service Devices</span>
+        <span>Условия конфиденциальности</span>
+        <span>Developed by wow studio</span>
+      </div>
+    </section>
   </footer>
   <script src="js/main.js"></script>
 </body>
