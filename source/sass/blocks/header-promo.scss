@@ -6,7 +6,15 @@
 .header-promo__details {
   display: flex;
   flex-direction: column;
-  align-content: flex-end;
+  position: relative;
+  z-index: 3;
+}
+
+.header-promo__details picture {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
 }
 
 .header-promo__details h1 {

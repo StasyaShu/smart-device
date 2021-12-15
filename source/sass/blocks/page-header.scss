@@ -43,6 +43,7 @@
   width: 100%;
   justify-content: space-between;
   padding: 0 30px;
+  margin: 0 0 300px 0;
 }
 
 .page-header__contacts {
@@ -51,10 +52,12 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  width: 50%;
+  justify-content: flex-end;
 }
 
 .page-header__contacts a:not(:last-child) {
-  margin-right: 40px;
+  margin-right: 60px;
 }
 
 .page-header__link span {
