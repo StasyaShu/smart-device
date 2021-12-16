@@ -1,8 +1,33 @@
+.footer-promo__wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: 1023px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 .footer-promo__wrapper span {
   display: none;
 
   @media (max-width: 1023px) {
     display: block;
+    font-size: 13px;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: $dark;
+    opacity: 0.5;
+
+    @include ptmono;
   }
 }
 
@@ -10,4 +35,19 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 106px;
+}
+
+.footer-promo__logo {
+  display: block;
+  width: 216px;
+  margin: 0 0 40px 0;
+
+  @media (max-width: 1023px) {
+    margin: 0;
+  }
 }

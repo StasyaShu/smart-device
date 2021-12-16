@@ -5,4 +5,15 @@
 
 .page-footer__wrapper {
   padding: 60px 7% 0 7%;
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-template-rows: 1fr min-content;
+  grid-row-gap: 40px;
+  grid-column-gap: 80px;
+
+  @media (max-width: 1023px) {
+    display: flex;
+    flex-direction: column;
+    padding: 60px 4% 0 4%;
+  }
 }
