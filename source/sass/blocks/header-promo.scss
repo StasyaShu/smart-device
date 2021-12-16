@@ -1,20 +1,37 @@
 .header-promo {
   display: flex;
   flex-wrap: wrap;
+  position: relative;
 }
 
 .header-promo__details {
   display: flex;
   flex-direction: column;
-  position: relative;
-  z-index: 3;
+  z-index: 1;
 }
 
-.header-promo__details picture {
+.header-promo picture {
   position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 1;
+  top: -103px;
+  right: -60px;
+  z-index: 0;
+
+  @media (max-width: 1023px) {
+    top: -98px;
+  }
+}
+
+.header-promo img {
+
+  @media (max-width: 1023px) {
+    width: 465px;
+    height: 340px;
+  }
+
+  @media (max-width: 767px) {
+    width: 301px;
+    height: 220px;
+  }
 }
 
 .header-promo__details h1 {
@@ -23,15 +40,29 @@
   padding: 0;
   font-size: 80px;
   line-height: 94px;
+  letter-spacing: 0.07em;
   text-transform: uppercase;
   color: $white;
-  max-width: 638px;
+  max-width: 718px;
 
   @include roboto-bold;
+
+  @media (max-width: 1023px) {
+    font-size: 60px;
+    line-height: 70px;
+    max-width: 470px;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 40px;
+    line-height: 47px;
+    max-width: 277px;
+  }
 }
 
 .header-promo__details p {
   display: block;
+  position: relative;
   margin: 0 0 0 90px;
   padding: 0;
   font-size: 22px;
@@ -40,6 +71,31 @@
   max-width: 638px;
 
   @include ptmono;
+
+  @media (max-width: 1023px) {
+    font-size: 18px;
+    max-width: 356px;
+    margin: 0 0 0 46px;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 16px;
+  }
+}
+
+.header-promo__details p::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 66px;
+  background-color: $white;
+  top: 17px;
+  left: -85px;
+
+  @media (max-width: 1023px) {
+    width: 33px;
+    left: -43px;
+  }
 }
 
 .header-promo__button {
@@ -48,6 +104,7 @@
   padding: 14px 30px;
   font-size: 16px;
   line-height: 19px;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   color: $white;
   width: 400px;
@@ -56,8 +113,21 @@
   text-align: center;
 
   @include roboto-bold;
+
+  @media (max-width: 1023px) {
+    margin: 0 0 0 46px;
+  }
+
+  @media (max-width: 767px) {
+    display: none;
+  }
 }
 
 .header-promo__button--mobile {
   display: none;
+
+  @media (max-width: 767px) {
+    display: block;
+    width: 100%;
+  }
 }
