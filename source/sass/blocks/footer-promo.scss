@@ -85,3 +85,13 @@
     margin: 0 0 20px 0;
   }
 }
+
+.footer-promo__wrapper svg {
+
+  fill: $grey-social;
+  cursor: pointer;
+
+  &:hover {
+    fill: $dark;
+  }
+}
