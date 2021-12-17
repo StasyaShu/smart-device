@@ -54,6 +54,14 @@
   color: $grey;
 
   @include roboto-regular;
+
+  @media (max-width: 1023px) {
+    font-size: 32px;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 28px;
+  }
 }
 
 .about__details p {
