@@ -1,3 +1,29 @@
+.footer-promo {
+
+  @media (max-width: 1023px) {
+    position: relative;
+    margin: 0 0 20px 0;
+  }
+
+  @media (max-width: 767px) {
+    margin: 0 0 40px 0;
+  }
+}
+
+.footer-promo::after {
+
+  @media (max-width: 1023px) {
+    content: "";
+    position: absolute;
+    width: 150%;
+    left: -121px;
+    bottom: -40px;
+    height: 1px;
+    background-color: $grey-decoration;
+    opacity: 0.2;
+  }
+}
+
 .footer-promo__wrapper {
   display: flex;
   flex-direction: column;
@@ -29,6 +55,10 @@
 
     @include ptmono;
   }
+
+  @media (max-width: 767px) {
+    margin: 0 0 20px 0;
+  }
 }
 
 .footer-promo__wrapper ul {
@@ -49,5 +79,9 @@
 
   @media (max-width: 1023px) {
     margin: 0;
+  }
+
+  @media (max-width: 767px) {
+    margin: 0 0 20px 0;
   }
 }
