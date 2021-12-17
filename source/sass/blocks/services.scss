@@ -1,0 +1,83 @@
+.services {
+  background-color: $dark;
+  padding: 93px 0 127px 0;
+}
+
+.services__wrapper {
+  padding: 0 14% 0;
+
+  @media (max-width: 1023px) {
+    padding: 0 4% 0;
+  }
+}
+
+.services__wrapper h2 {
+  display: block;
+  margin: 0 0 48px 0;
+  padding: 0;
+  font-size: 36px;
+  line-height: 51px;
+  color: $white;
+
+  @include roboto-regular;
+}
+
+.services__wrapper ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  @media (max-width: 1023px) {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+.services__wrapper li {
+  @media (max-width: 1023px) {
+    width: 100%;
+  }
+}
+
+.services__wrapper img {
+  @media (max-width: 1023px) {
+    width: 100%;
+  }
+}
+
+.services__wrapper a {
+  display: block;
+  width: 370px;
+  height: 620px;
+  position: relative;
+}
+
+.services__wrapper a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 63px;
+  height: 63px;
+  background-color: $blue;
+  bottom: 0;
+  right: 0;
+  background-image: url("../img/icon-forward.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.services__wrapper span {
+  display: block;
+  max-width: 170px;
+  position: absolute;
+  top: 44px;
+  left: 44px;
+  font-size: 20px;
+  line-height: 30px;
+  color: $white;
+
+  @include roboto-regular;
+}
