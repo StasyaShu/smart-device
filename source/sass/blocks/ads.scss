@@ -1,13 +1,64 @@
 .ads {
-  margin: 0 0 50px 0;
+  margin: 0 0 100px 0;
+  position: relative;
+}
+
+.ads::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: -96px;
+  left: -223px;
+  background-image: url("../img/decoration-main-tr-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  width: 2243px;
+  height: 1347px;
+  z-index: -1;
+
+  @media (max-width: 1023px) {
+    display: none;
+  }
 }
 
 .ads__wrapper {
-  padding: 40px 13% 0;
+  padding: 100px 13% 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 30px;
+
+  @media (max-width: 1023px) {
+    padding: 100px 4% 0;
+    position: relative;
+  }
+
+  @media (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+
+.ads__wrapper::after {
+  @media (max-width: 1023px) {
+    content: "";
+    position: absolute;
+    display: block;
+    background-image: url("../img/decoration-main-tr-tablet.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    width: 760px;
+    height: 722px;
+    left: 339px;
+    bottom: -239px;
+    z-index: -1;
+  }
+
+  @media (max-width: 767px) {
+    left: -84px;
+    bottom: -155px;
+  }
 }
 
 .ads__wrapper div {
@@ -15,14 +66,33 @@
   padding: 27px;
   border: 1px solid $grey-light;
   border-left: 3px solid $blue;
+  background-color: $white;
+}
+
+.ads__wrapper div:hover {
+  background-color: $blue;
+  border: 1px solid $blue;
+
+  svg {
+    fill: $white;
+  }
+
+  span {
+    color: $white;
+  }
+
+  p {
+    color: $white;
+  }
 }
 
 .ads__wrapper svg {
   fill: $blue;
+  margin: 0 0 15px 0;
 }
 
 .ads__wrapper span {
-  margin: 0;
+  margin: 0 0 15px 0;
   padding: 0;
   display: block;
   font-size: 24px;
