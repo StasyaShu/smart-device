@@ -1,13 +1,18 @@
 .services {
   background-color: $dark;
   padding: 93px 0 127px 0;
+
+  @media (max-width: 1023px) {
+    padding: 53px 0 78px 0;
+  }
 }
 
 .services__wrapper {
   padding: 0 14% 0;
+  width: 100%;
 
   @media (max-width: 1023px) {
-    padding: 0 4% 0;
+    padding: 0 3% 0;
   }
 }
 
@@ -45,6 +50,7 @@
 .services__wrapper img {
   @media (max-width: 1023px) {
     width: 100%;
+    height: 256px;
   }
 }
 
@@ -53,6 +59,11 @@
   width: 370px;
   height: 620px;
   position: relative;
+
+  @media (max-width: 1023px) {
+    width: 100%;
+    height: 256px;
+  }
 }
 
 .services__wrapper a::after {
