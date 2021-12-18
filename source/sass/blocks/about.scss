@@ -119,6 +119,6 @@
   }
 
   &:active {
-    opacity: 0.5;
+    box-shadow: 0 0 5px 2px $grey;
   }
 }
