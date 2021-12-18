@@ -26,10 +26,45 @@
   }
 }
 
+.callback__wrapper::before {
+  content: "";
+  position: absolute;
+  display: block;
+  z-index: -2;
+  width: 671px;
+  height: 641px;
+  background-image: url("../img/decoration-main-form-tr-plane-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  top: -144px;
+  left: 0;
+
+  @media (max-width: 1023px) {
+    display: none;
+  }
+}
+
+.callback__wrapper::after {
+  content: "";
+  position: absolute;
+  top: -69px;
+  right: -255px;
+  width: 510px;
+  height: 670px;
+  background-image: url("../img/decoration-main-form-tr-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  z-index: -2;
+
+  @media (max-width: 1023px) {
+    display: none;
+  }
+}
+
 .callback__wrapper picture {
   position: absolute;
-  top: 64px;
-  left: 74px;
+  top: 78px;
+  left: 135px;
   z-index: -1;
 
   @media (max-width: 1023px) {
@@ -84,7 +119,7 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: min-content 1fr min-content;
   grid-column-gap: 30px;
-  grid-row-gap: 30px;
+  grid-row-gap: 40px;
 
   @media (max-width: 767px) {
     display: flex;
@@ -96,7 +131,7 @@
   width: 100%;
   background: #{'hsla(0 0% 100% / 10%)'};
   border: 0;
-  padding: 15px 14px
+  padding: 22px 14px;
 }
 
 .callback__content input::placeholder {
