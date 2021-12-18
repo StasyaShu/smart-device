@@ -97,3 +97,12 @@
 
   @include ptmono;
 }
+
+.footer-navigation__item a:hover {
+  color: $blue;
+  opacity: 1;
+}
+
+.footer-navigation__item a:active {
+  opacity: 0.5;
+}

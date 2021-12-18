@@ -102,6 +102,16 @@
   }
 }
 
+.header-promo__button:hover {
+  color: $blue;
+  background-color: $white;
+}
+
+.header-promo__button:active {
+  box-shadow: 0 0 5px 2px $white;
+  border: 1px solid $dark;
+}
+
 .header-promo__button--mobile {
   display: none;
 

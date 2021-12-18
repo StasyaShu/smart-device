@@ -174,11 +174,25 @@
   align-items: center;
 }
 
+.page-header__link:hover {
+
+  svg {
+    fill: $white;
+  }
+
+  span {
+    color: $blue;
+  }
+}
+
 .page-header__link svg {
   margin-right: 15px;
+  transform: translateY(2px);
+  fill: $blue;
 
   @media (max-width: 1023px) {
     margin-right: 0;
+    transform: translateY(0);
   }
 }
 
@@ -221,4 +235,19 @@
   border-radius: 5px;
 
   @include roboto-bold;
+
+  @media (max-width: 1023px) {
+    display: none;
+  }
 }
+
+.page-header__order-call:hover {
+  color: $dark;
+  background-color: $white;
+}
+
+.page-header__order-call:active {
+  box-shadow: 0 0 5px 2px $white;
+  border: 1px solid $dark;
+}
+
