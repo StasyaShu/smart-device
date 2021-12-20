@@ -17,4 +17,9 @@
     flex-direction: column;
     padding: 60px 4% 0 4%;
   }
+
+  @media (max-width: 767px) {
+    grid-row-gap: 0;
+    grid-column-gap: 0;
+  }
 }

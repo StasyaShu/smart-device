@@ -1,19 +1,63 @@
 .footer-navigation__wrapper {
   display: grid;
   grid-template-columns: 1fr 0.6fr;
-  grid-template-rows: min-content;
-  justify-items: flex-end;
-
-  @media (max-width: 1023px) {
-    display: flex;
-    flex-wrap: wrap;
-    grid-column-gap: 0;
-    justify-content: space-between;
-  }
+  grid-template-rows: min-content 1fr;
+  grid-column-gap: 60px;
 
   @media (max-width: 767px) {
+    display: flex;
     flex-direction: column;
   }
+}
+
+.footer-navigation__wrapper--nojs {
+  @media (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+}
+
+.footer-navigation__wrapper--nojs::after {
+  @media (max-width: 767px) {
+    content: "";
+    position: absolute;
+    width: 150%;
+    height: 1px;
+    background-color: $grey-decoration;
+    opacity: 0.2;
+    bottom: 22px;
+    left: -121px;
+  }
+}
+
+.footer-navigation__wrapper h3 {
+  display: block;
+  padding-left: 35px;
+}
+
+.footer-navigation__wrapper div {
+  padding-left: 35px;
+}
+
+.footer-navigation__wrapper h3:first-of-type {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+}
+
+.footer-navigation__wrapper h3:last-of-type {
+  grid-row: 1 / 2;
+  grid-column: 2 / 3;
+}
+
+.footer-navigation__wrapper div:first-of-type {
+  grid-row: 2 / 3;
+  grid-column: 1 / 2;
+}
+
+.footer-navigation__wrapper div:last-of-type {
+  grid-row: 2 / 3;
+  grid-column: 2 / 3;
 }
 
 .footer-navigation__list {
@@ -38,19 +82,58 @@
   flex-direction: column;
 }
 
-.footer-navigation__item {
+.footer-navigation__tab {
+  @media (max-width: 767px) {
+    height: 0;
+    overflow: hidden;
+    transition: height 1s;
+    margin: 0 0 50px 0;
+    position: relative;
+  }
+}
+
+.footer-navigation__tab--nojs {
+  @media (max-width: 767px) {
+    height: auto;
+    overflow: auto;
+    transition: none;
+  }
+}
+
+
+.footer-navigation__item--not-select {
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $dark;
+
+  @include roboto-regular;
+
   @media (max-width: 767px) {
     position: relative;
   }
 }
 
-.footer-navigation__item:nth-child(0n+1) {
+.footer-navigation__item--not-select::before {
   @media (max-width: 767px) {
-    margin: 0 0 60px 0;
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-image: url("../img/icon-plus.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
   }
 }
 
-.footer-navigation__item::after {
+.footer-navigation__item--not-select::after {
   @media (max-width: 767px) {
     content: "";
     position: absolute;
@@ -58,13 +141,50 @@
     height: 1px;
     background-color: $grey-decoration;
     opacity: 0.2;
-    bottom: -32px;
-    left: -121px;
+    bottom: -25px;
+    left: -121px
   }
 }
 
-.footer-navigation__item h3 {
-  cursor: pointer;
+.footer-navigation__item--select {
+  @media (max-width: 767px) {
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    font-size: 15px;
+    line-height: 16px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: $dark;
+
+    @include roboto-regular;
+  }
+}
+
+.footer-navigation__item--select::before {
+  @media (max-width: 767px) {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 17px;
+    height: 2px;
+    background-image: url("../img/icon-minus.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+}
+
+.footer-navigation__item--select::after {
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.footer-navigation__item--nojs {
+  display: block;
   padding: 0;
   margin: 0;
   font-size: 15px;
@@ -76,7 +196,19 @@
   @include roboto-regular;
 }
 
-.footer-navigation__item p {
+.footer-navigation__item--nojs::before {
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.footer-navigation__item--nojs::after {
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.footer-navigation__wrapper p {
   margin: 0;
   padding: 0;
   display: block;
@@ -88,7 +220,7 @@
   @include ptmono;
 }
 
-.footer-navigation__item a {
+.footer-navigation__wrapper a {
   display: block;
   font-size: 15px;
   line-height: 25px;
@@ -98,11 +230,11 @@
   @include ptmono;
 }
 
-.footer-navigation__item a:hover {
+.footer-navigation__wrapper a:hover {
   color: $blue;
   opacity: 1;
 }
 
-.footer-navigation__item a:active {
+.footer-navigation__wrappera:active {
   opacity: 0.5;
 }

@@ -3,6 +3,10 @@
   grid-row: 2 / -1;
   position: relative;
   margin: 25px 0 0 0;
+
+  @media (max-width: 767px) {
+    margin: 0;
+  }
 }
 
 .footer-copyright::before {
