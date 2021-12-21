@@ -1,54 +1,111 @@
 const loadWindow = (() => {
-  const footerNav = document.querySelector('.footer-navigation__wrapper');
-  const footerH3 = document.querySelectorAll('.footer-navigation__item');
-  const footerTab = document.querySelectorAll('.footer-navigation__tab');
-
   return {
     removeNojs: () => {
-      footerNav.classList.remove('footer-navigation__wrapper--nojs');
-      footerH3.classList.remove('footer-navigation__item--nojs');
-      footerH3.classList.add('footer-navigation__item--not-select');
-      footerTab.classList.remove('footer-navigation__tab--nojs');
+      const footerNav = document.querySelector('.footer-navigation__wrapper');
+      const footerH3 = footerNav.querySelectorAll('.footer-navigation__item');
+      const footerTab = footerNav.querySelectorAll('.footer-navigation__tab');
+
+      if (footerNav) {
+        footerNav.classList.remove('footer-navigation__wrapper--nojs');
+        footerH3.classList.remove('footer-navigation__item--nojs');
+        footerTab.classList.remove('footer-navigation__tab--nojs');
+      }
     }
   }
 })()
 window.addEventListener('load', loadWindow.removeNojs());
 
+// (() => {
+//   window.onload = function () {
+//     const footerNav = document.querySelector('.footer-navigation__wrapper');
+//     const footerH3 = footerNav.querySelectorAll('.footer-navigation__item');
+//     const footerTab = footerNav.querySelectorAll('.footer-navigation__tab');
+
+//     if (footerNav) {
+//       footerNav.classList.remove('footer-navigation__wrapper--nojs');
+//       footerH3.classList.remove('footer-navigation__item--nojs');
+//       footerTab.classList.remove('footer-navigation__tab--nojs');
+//     }
+//   }
+// })();
+
+// Появление попапа с формой
+
+(() => {
+  const orderCallButton = document.querySelector('.page-header__order-call');
+  const popupTemplate = document.querySelector('#popup').content.querySelector('.popup');
+  const popupCloseButton = popupTemplate.querySelector('.popup__close');
+  const popupForm = popupTemplate.cloneNode(true);
+
+
+  orderCallButton.addEventListener('click', onSubmitPopup);
+
+  const documentClickHandler = () => {
+    closePopupForm();
+  }
+
+  const documentKeydownHandler = (evt) => {
+    if (evt.keyCode === ESC_KEY_CODE) {
+      closePopupForm();
+    }
+  }
+
+  function onSubmitPopup() {
+    document.body.append(popupForm);
+    document.addEventListener('keydown', documentKeydownHandler);
+    document.addEventListener('click', documentClickHandler);
+    popupCloseButton.addEventListener('click', documentClickHandler);
+  }
+
+  function closePopupForm() {
+    popupForm.remove();
+    document.removeEventListener('keydown', documentKeydownHandler);
+    document.removeEventListener('click', documentClickHandler);
+    popupCloseButton.removeEventListener('click', documentClickHandler);
+  }
+})();
+
+// Аккордеон
+
 (function handleAccordion() {
-  const accordion = document.getElementById('accordion');
+  if (document.documentElement.clientWidth < 768) {
+    const accordion = document.getElementById('accordion');
 
-  if (accordion) {
-    accordion.addEventListener('click', change);
+    if (accordion) {
+      accordion.addEventListener('click', change);
 
-    function change(evt) {
-      const targ = evt.target;
-      if (targ.tagName !== 'H3') return;
+      function change(evt) {
+        const targ = evt.target;
+        if (targ.tagName !== 'H3') return;
 
-      if (targ.classList.contains('footer-navigation__item--select')) {
-        hideAll();
-      } else {
-        hideAll();
-        targ.classList.add('footer-navigation__item--select');
-        showText(targ.nextElementSibling);
+        if (targ.classList.contains('footer-navigation__item--select')) {
+          hideAll();
+        } else {
+          hideAll();
+          targ.classList.add('footer-navigation__item--select');
+          showText(targ.nextElementSibling);
+        }
       }
-    }
 
-    function hideAll() {
-      const h3El = accordion.querySelectorAll('h3');
-      const divEl = accordion.querySelectorAll('div');
-      for (var i = 0; i < h3El.length; i++) {
-        h3El[i].classList.remove('footer-navigation__item--select');
+      function hideAll() {
+        const h3El = accordion.querySelectorAll('h3');
+        const divEl = accordion.querySelectorAll('div');
+        for (var i = 0; i < h3El.length; i++) {
+          h3El[i].classList.remove('footer-navigation__item--select');
+        }
+        for (var i = 0; i < divEl.length; i++) {
+          divEl[i].style.height = '0';
+        }
       }
-      for (var i = 0; i < divEl.length; i++) {
-        divEl[i].style.height = '0';
-      }
-    }
 
-    function showText(textEl) {
-      textEl.style.height = textEl.scrollHeight + 'px';
+      function showText(textEl) {
+        textEl.style.height = textEl.scrollHeight + 'px';
+      }
     }
   }
 })();
+
+// Плавный скролл
 
 (function scrollToAnchor() {
   const anchors = document.querySelectorAll('a[href*="#"]');
@@ -68,6 +125,8 @@ window.addEventListener('load', loadWindow.removeNojs());
   }
 })();
 
+// Валидатор поля имени
+
 (function validateName() {
   const inputName = document.getElementById('name-id');
   inputName.addEventListener('invalid', () => {
@@ -85,6 +144,8 @@ window.addEventListener('load', loadWindow.removeNojs());
   })
 })();
 
+// Валидатор поля телефона
+
 (function validateTel() {
   const inputTel = document.getElementById('tel-id');
   inputTel.addEventListener('invalid', () => {
@@ -97,6 +158,8 @@ window.addEventListener('load', loadWindow.removeNojs());
     }
   })
 })();
+
+// Маска для телефона
 
 (() => {
   document.addEventListener('DOMContentLoaded', () => {
