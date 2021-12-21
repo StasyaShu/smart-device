@@ -1,19 +1,19 @@
-const loadWindow = (() => {
-  return {
-    removeNojs: () => {
-      const footerNav = document.querySelector('.footer-navigation__wrapper');
-      const footerH3 = footerNav.querySelectorAll('.footer-navigation__item');
-      const footerTab = footerNav.querySelectorAll('.footer-navigation__tab');
+// const loadWindow = (() => {
+//   return {
+//     removeNojs: () => {
+//       const footerNav = document.querySelector('.footer-navigation__wrapper');
+//       const footerH3 = footerNav.querySelectorAll('.footer-navigation__item');
+//       const footerTab = footerNav.querySelectorAll('.footer-navigation__tab');
 
-      if (footerNav) {
-        footerNav.classList.remove('footer-navigation__wrapper--nojs');
-        footerH3.classList.remove('footer-navigation__item--nojs');
-        footerTab.classList.remove('footer-navigation__tab--nojs');
-      }
-    }
-  }
-})()
-window.addEventListener('load', loadWindow.removeNojs());
+//       if (footerNav) {
+//         footerNav.classList.remove('footer-navigation__wrapper--nojs');
+//         footerH3.classList.remove('footer-navigation__item--nojs');
+//         footerTab.classList.remove('footer-navigation__tab--nojs');
+//       }
+//     }
+//   }
+// })()
+// window.addEventListener('load', loadWindow.removeNojs());
 
 // (() => {
 //   window.onload = function () {
@@ -31,7 +31,7 @@ window.addEventListener('load', loadWindow.removeNojs());
 
 // Появление попапа с формой
 
-(() => {
+const handlePopup = (() => {
   const orderCallButton = document.querySelector('.page-header__order-call');
   const popupTemplate = document.querySelector('#popup').content.querySelector('.popup');
   const popupCloseButton = popupTemplate.querySelector('.popup__close');
@@ -68,41 +68,43 @@ window.addEventListener('load', loadWindow.removeNojs());
 // Аккордеон
 
 (function handleAccordion() {
-  if (document.documentElement.clientWidth < 768) {
-    const accordion = document.getElementById('accordion');
+  window.addEventListener('resize', () => {
+    if (document.documentElement.clientWidth < 768) {
+      const accordion = document.getElementById('accordion');
 
-    if (accordion) {
-      accordion.addEventListener('click', change);
+      if (accordion) {
+        accordion.addEventListener('click', change);
 
-      function change(evt) {
-        const targ = evt.target;
-        if (targ.tagName !== 'H3') return;
+        function change(evt) {
+          const targ = evt.target;
+          if (targ.tagName !== 'H3') return;
 
-        if (targ.classList.contains('footer-navigation__item--select')) {
-          hideAll();
-        } else {
-          hideAll();
-          targ.classList.add('footer-navigation__item--select');
-          showText(targ.nextElementSibling);
+          if (targ.classList.contains('footer-navigation__item--select')) {
+            hideAll();
+          } else {
+            hideAll();
+            targ.classList.add('footer-navigation__item--select');
+            showText(targ.nextElementSibling);
+          }
         }
-      }
 
-      function hideAll() {
-        const h3El = accordion.querySelectorAll('h3');
-        const divEl = accordion.querySelectorAll('div');
-        for (var i = 0; i < h3El.length; i++) {
-          h3El[i].classList.remove('footer-navigation__item--select');
+        function hideAll() {
+          const h3El = accordion.querySelectorAll('h3');
+          const divEl = accordion.querySelectorAll('div');
+          for (var i = 0; i < h3El.length; i++) {
+            h3El[i].classList.remove('footer-navigation__item--select');
+          }
+          for (var i = 0; i < divEl.length; i++) {
+            divEl[i].style.height = '0';
+          }
         }
-        for (var i = 0; i < divEl.length; i++) {
-          divEl[i].style.height = '0';
-        }
-      }
 
-      function showText(textEl) {
-        textEl.style.height = textEl.scrollHeight + 'px';
+        function showText(textEl) {
+          textEl.style.height = textEl.scrollHeight + 'px';
+        }
       }
     }
-  }
+  })
 })();
 
 // Плавный скролл
