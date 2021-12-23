@@ -42,7 +42,7 @@ const handlePopup = (() => {
         orderCallButton.addEventListener('click', (evt) => {
           evt.preventDefault();
           popup.classList.remove('popup--hide');
-          const popupInputName = document.querySelector('.popup__input-name');
+          const popupInputName = document.getElementById('popup-name-id');
           popupInputName.focus();
           popupOverlay.classList.add('overlay--active');
           body.style.overflow = 'hidden';
@@ -169,8 +169,9 @@ handlePopup.closePopupOverlay();
 // Валидатор поля телефона
 
 (function validateTel() {
-  const inputTel = document.getElementById('tel-id');
-  inputTel.addEventListener('invalid', () => {
+  const inputTelForm = document.getElementById('tel-id');
+  const inputTelPopup = document.getElementById('popup-tel-id');
+  [inputTelForm, inputTelPopup].addEventListener('invalid', () => {
     if (inputTel.validity.valueMissing) {
       inputTel.setCustomValidity('Введите пожалуйста номер телефона');
     } else if (inputTel.value.length < 10) {

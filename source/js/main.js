@@ -42,7 +42,7 @@ const handlePopup = (() => {
         orderCallButton.addEventListener('click', (evt) => {
           evt.preventDefault();
           popup.classList.remove('popup--hide');
-          const popupInputName = document.querySelector('.popup__input-name');
+          const popupInputName = document.getElementById('popup-name-id');
           popupInputName.focus();
           popupOverlay.classList.add('overlay--active');
           body.style.overflow = 'hidden';
