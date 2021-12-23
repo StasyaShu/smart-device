@@ -102,6 +102,10 @@
   }
 }
 
+.header-promo__button--nojs {
+  display: none;
+}
+
 .header-promo__button:hover {
   color: $blue;
   background-color: $white;

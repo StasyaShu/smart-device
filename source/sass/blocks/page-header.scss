@@ -143,7 +143,7 @@
   }
 }
 
-.page-header__contacts a {
+.page-header__contacts a:not(:last-child) {
   display: block;
   cursor: pointer;
 }
@@ -239,6 +239,10 @@
   @media (max-width: 1023px) {
     display: none;
   }
+}
+
+.page-header__order-call--nojs {
+  display: none;
 }
 
 .page-header__order-call:hover {
