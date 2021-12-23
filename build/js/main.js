@@ -89,7 +89,7 @@ handlePopup.closePopupOverlay();
 
 (function handleAccordion() {
   window.addEventListener('resize', () => {
-    if (document.documentElement.clientWidth < 800) {
+    if (document.documentElement.clientWidth < 767) {
       const accordion = document.getElementById('accordion');
 
       if (accordion) {
@@ -150,36 +150,39 @@ handlePopup.closePopupOverlay();
 // Валидатор поля имени
 
 (function validateName() {
-  const inputName = document.getElementById('name-id');
-  inputName.addEventListener('invalid', () => {
-    if (inputName.validity.tooShort) {
-      inputName.setCustomValidity('Введите пожалуйста минимум 2 символа');
-    } else if (inputName.validity.tooLong) {
-      inputName.setCustomValidity('Значение не должно превышать 25-ти символов');
-    } else if (inputName.validity.valueMissing) {
-      inputName.setCustomValidity('Введите пожалуйста Ваше имя');
-    } else if (inputName.validity.patternMismatch) {
-      inputName.setCustomValidity('Имя должно состоять из букв русского или английского алфавита');
-    } else {
-      inputName.setCustomValidity('');
-    }
-  })
+  const inputsName = document.querySelectorAll('input[type*="text"]');
+  for (let input of inputsName) {
+    input.addEventListener('invalid', () => {
+      if (input.validity.tooShort) {
+        input.setCustomValidity('Введите пожалуйста минимум 2 символа');
+      } else if (input.validity.tooLong) {
+        input.setCustomValidity('Значение не должно превышать 25-ти символов');
+      } else if (input.validity.valueMissing) {
+        input.setCustomValidity('Введите пожалуйста Ваше имя');
+      } else if (input.validity.patternMismatch) {
+        input.setCustomValidity('Имя должно состоять из букв русского или английского алфавита');
+      } else {
+        input.setCustomValidity('');
+      }
+    })
+  }
 })();
 
 // Валидатор поля телефона
 
 (function validateTel() {
-  const inputTelForm = document.getElementById('tel-id');
-  const inputTelPopup = document.getElementById('popup-tel-id');
-  [inputTelForm, inputTelPopup].addEventListener('invalid', () => {
-    if (inputTel.validity.valueMissing) {
-      inputTel.setCustomValidity('Введите пожалуйста номер телефона');
-    } else if (inputTel.value.length < 10) {
-      inputTel.setCustomValidity('Номер телефона должен содержать 11 цифр, включая +7');
-    } else {
-      inputTel.setCustomValidity('');
-    }
-  })
+  const inputsTel = document.querySelectorAll('input[type*="tel"]');
+  for (let input of inputsTel) {
+    input.addEventListener('invalid', () => {
+      if (input.validity.valueMissing) {
+        input.setCustomValidity('Введите пожалуйста номер телефона');
+      } else if (input.value.length < 10) {
+        input.setCustomValidity('Номер телефона должен содержать 11 цифр, включая +7');
+      } else {
+        input.setCustomValidity('');
+      }
+    })
+  }
 })();
 
 // Маска для телефона
@@ -188,9 +191,11 @@ handlePopup.closePopupOverlay();
   document.addEventListener('DOMContentLoaded', () => {
 
     const inputTel = document.getElementById('tel-id');
+    const inputTelPopup = document.getElementById('popup-tel-id');
     const maskOptions = {
       mask: '+{7}(000)000-00-00'
     }
     IMask(inputTel, maskOptions)
+    IMask(inputTelPopup, maskOptions)
   })
 })();
