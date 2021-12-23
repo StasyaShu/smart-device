@@ -30,6 +30,7 @@ const handlePopup = (() => {
   const orderCallButton = document.querySelector('.page-header__order-call');
   const popup = document.querySelector('.popup');
   const popupCloseButton = document.querySelector('.popup__close');
+  const popupOverlay = document.querySelector('.overlay');
   const ESC_KEY_CODE = 27;
 
   return {
@@ -43,11 +44,13 @@ const handlePopup = (() => {
           popup.classList.remove('popup--hide');
           const popupInputName = document.querySelector('.popup__input-name');
           popupInputName.focus();
+          popupOverlay.classList.add('overlay--active');
           body.style.overflow = 'hidden';
         })
         document.addEventListener('keydown', (evt) => {
           if (evt.keyCode === ESC_KEY_CODE) {
             popup.classList.add('popup--hide');
+            popupOverlay.classList.remove('overlay--active');
             body.style.overflow = 'scroll';
           }
         })
@@ -59,6 +62,7 @@ const handlePopup = (() => {
         popupCloseButton.addEventListener('click', (evt) => {
           evt.preventDefault();
           popup.classList.add('popup--hide');
+          popupOverlay.classList.remove('overlay--active');
           body.style.overflow = 'scroll';
         })
       }
@@ -66,9 +70,10 @@ const handlePopup = (() => {
 
     closePopupOverlay: () => {
       if (popup) {
-        popup.addEventListener('click', (evt) => {
-          if (evt.target === popup) {
+        document.addEventListener('click', (evt) => {
+          if (evt.target === popupOverlay) {
             popup.classList.add('popup--hide');
+            popupOverlay.classList.remove('overlay--active');
             body.style.overflow = 'scroll';
           }
         })
