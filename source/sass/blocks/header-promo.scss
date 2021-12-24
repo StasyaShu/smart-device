@@ -41,7 +41,7 @@
 .header-promo p {
   display: block;
   position: relative;
-  margin: 0 0 30px 90px;
+  margin: 0 0 48px 98px;
   padding: 0;
   font-size: 22px;
   line-height: 34px;
@@ -49,6 +49,7 @@
   max-width: 638px;
 
   @include ptmono;
+  transform: translate(0px, 7px);
 
   @media (max-width: 1023px) {
     font-size: 18px;
@@ -68,8 +69,8 @@
   height: 2px;
   width: 66px;
   background-color: $white;
-  top: 17px;
-  left: -85px;
+  top: 16px;
+  left: -91px;
 
   @media (max-width: 1023px) {
     width: 33px;
@@ -79,14 +80,14 @@
 
 .header-promo__button {
   display: block;
-  margin: 0 0 0 90px;
-  padding: 14px 30px;
+  margin: 0 0 0 98px;
+  padding: 19px 41px;
   font-size: 16px;
   line-height: 19px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: $white;
-  width: 400px;
+  width: 406px;
   border-radius: 5px;
   background-color: $blue;
   text-align: center;

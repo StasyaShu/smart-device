@@ -1,6 +1,6 @@
 .page-header {
   width: 100%;
-  min-height: 950px;
+  min-height: 878px;
   background-image: url("../img/bg-desktop@1x.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -33,7 +33,7 @@
 
 .page-header__wrapper {
   width: 100%;
-  padding: 20px 7% 0;
+  padding: 32px 12% 0;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -52,8 +52,8 @@
   background-image: url("../img/decoration-promo-desktop.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
-  top: -32px;
-  right: 106px;
+  top: -3px;
+  right: 390px;
 
   @media (max-width: 1023px) {
     background-image: url("../img/decoration-promo-tablet.svg");
@@ -74,8 +74,8 @@
 
 .page-header__picture {
   position: absolute;
-  top: 224px;
-  right: 27px;
+  top: 253px;
+  right: 307px;
   z-index: 2;
 
   @media (max-width: 1023px) {
@@ -107,7 +107,6 @@
   flex-wrap: wrap;
   align-items: center;
   width: 100%;
-  justify-content: space-between;
   padding: 0;
   margin: 0 0 225px 0;
   z-index: 3;
@@ -119,6 +118,10 @@
   @media (max-width: 767px) {
     margin: 0 0 227px 0;
   }
+}
+
+.page-header__logo a {
+  padding: 0 0 0 0;
 }
 
 .page-header__logo img {
@@ -135,8 +138,9 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  width: 75%;
+  width: 77%;
   justify-content: flex-end;
+  transform: translate(8px, -4px);
 
   @media (max-width: 1023px) {
     width: auto;
@@ -148,16 +152,8 @@
   cursor: pointer;
 }
 
-.page-header__contacts a:last-child {
-  margin-left: 38px;
-
-  @media (max-width: 1023px) {
-    display: none;
-  }
-}
-
 .page-header__contacts a:nth-child(0n+2) {
-  margin-left: 78px;
+  margin-left: 86px;
 
   @media (max-width: 1023px) {
     margin-left: 25px;
@@ -186,7 +182,7 @@
 }
 
 .page-header__link svg {
-  margin-right: 15px;
+  margin-right: 14px;
   transform: translateY(2px);
   fill: $blue;
 
@@ -227,12 +223,15 @@
 .page-header__order-call {
   font-size: 14px;
   line-height: 16px;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   color: $white;
   text-align: center;
-  padding: 9px 23px;
+  padding: 13px 26px;
   border: 1px solid $white;
   border-radius: 5px;
+  display: block;
+  margin-left: 48px;
 
   @include roboto-bold;
 
@@ -254,4 +253,3 @@
   box-shadow: 0 0 5px 2px $white;
   border: 1px solid $dark;
 }
-

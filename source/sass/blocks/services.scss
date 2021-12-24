@@ -1,6 +1,6 @@
 .services {
   background-color: $dark;
-  padding: 93px 0 127px 0;
+  padding: 88px 0 126px;
 
   @media (max-width: 1023px) {
     padding: 53px 0 78px 0;
@@ -8,7 +8,7 @@
 }
 
 .services__wrapper {
-  padding: 0 11% 0;
+  padding: 0 18% 0;
   width: 100%;
 
   @media (max-width: 1023px) {
@@ -18,7 +18,7 @@
 
 .services__wrapper h2 {
   display: block;
-  margin: 0 0 48px 0;
+  margin: 0 0 53px 0;
   padding: 0;
   font-size: 36px;
   line-height: 51px;
@@ -67,7 +67,7 @@
 }
 
 .services__wrapper a:hover {
-  box-shadow: 0.4em 0.4em 5px rgba(122,122,122,0.5);
+  box-shadow: 0.4em 0.4em 5px rgba(122, 122, 122, 0.5);
 }
 
 .services__wrapper a::after {
@@ -88,8 +88,8 @@
   display: block;
   max-width: 170px;
   position: absolute;
-  top: 44px;
-  left: 44px;
+  top: 51px;
+  left: 47px;
   font-size: 20px;
   line-height: 30px;
   color: $white;

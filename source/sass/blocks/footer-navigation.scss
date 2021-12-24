@@ -1,8 +1,8 @@
 .footer-navigation__wrapper {
   display: grid;
-  grid-template-columns: 1fr 0.6fr;
+  grid-template-columns: 0.7fr 0.6fr;
   grid-template-rows: min-content 1fr;
-  grid-column-gap: 60px;
+  grid-column-gap: 52px;
 
   @media (max-width: 767px) {
     display: flex;
@@ -37,7 +37,7 @@
 }
 
 .footer-navigation__wrapper div {
-  padding-left: 35px;
+  padding-left: 34px;
 }
 
 .footer-navigation__wrapper h3:first-of-type {
@@ -63,13 +63,13 @@
 .footer-navigation__list {
   list-style: none;
   margin: 0;
-  padding: 36px 0 0;
+  padding: 28px 0 0;
 }
 
 .footer-navigation__list--sections {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-column-gap: 80px;
+  grid-column-gap: 50px;
 
   @media (max-width: 1023px) {
     display: flex;

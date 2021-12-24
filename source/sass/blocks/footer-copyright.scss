@@ -2,7 +2,8 @@
   grid-column: 1 / -1;
   grid-row: 2 / -1;
   position: relative;
-  margin: 25px 0 0 0;
+  margin: 34px 0 0 0;
+  padding: 0 150px 0 0;
 
   @media (max-width: 767px) {
     margin: 0;
@@ -48,7 +49,7 @@
 }
 
 .footer-copyright__wrapper span:nth-child(0n+1) {
-  margin: 0 75px 0 0;
+  margin: 0 78px 0 0;
 
   @media (max-width: 1023px) {
     display: none;
@@ -56,7 +57,7 @@
 }
 
 .footer-copyright__wrapper span:nth-child(0n+2) {
-  margin: 0 115px 0 0;
+  margin: 0 146px 0 0;
 
   @media (max-width: 1023px) {
     display: none;

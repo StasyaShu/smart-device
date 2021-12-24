@@ -1,5 +1,5 @@
 .ads {
-  margin: 0 0 100px 0;
+  margin: 0 0 38px 0;
   position: relative;
 
   @media (max-width: 1023px) {
@@ -26,11 +26,12 @@
 }
 
 .ads__wrapper {
-  padding: 100px 11% 0;
+  padding: 113px 18% 0;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 43% 43%;
   grid-template-rows: 1fr 1fr;
-  gap: 30px;
+  gap: 34px;
+  transform: translate(3px, -8px);
 
   @media (max-width: 1023px) {
     padding: 100px 4% 0;
@@ -67,7 +68,7 @@
 
 .ads__wrapper div {
   cursor: pointer;
-  padding: 27px;
+  padding: 44px 41px 73px 41px;
   border: 1px solid $grey-light;
   border-left: 3px solid $blue;
   background-color: $white;

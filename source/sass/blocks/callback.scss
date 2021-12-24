@@ -1,7 +1,7 @@
 .callback {
   width: 100%;
   background-color: $blue;
-  padding: 93px 0 127px 0;
+  padding: 95px 0 113px;
 
   @media (max-width: 767px) {
     padding: 23px 0 37px 0;
@@ -13,7 +13,7 @@
 }
 
 .callback__wrapper {
-  padding: 0 14% 0;
+  padding: 0 25% 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
@@ -40,8 +40,8 @@
   background-image: url("../img/decoration-main-form-tr-plane-desktop.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
-  top: -144px;
-  left: 0;
+  top: -154px;
+  left: 172px;
 
   @media (max-width: 1023px) {
     display: none;
@@ -67,8 +67,8 @@
 
 .callback__wrapper picture {
   position: absolute;
-  top: 78px;
-  left: 135px;
+  top: 68px;
+  left: 348px;
   z-index: -1;
 
   @media (max-width: 1023px) {
@@ -80,6 +80,7 @@
   display: flex;
   flex-direction: column;
   max-width: 570px;
+  transform: translate(-6px, 0px);
 
   @media (max-width: 1023px) {
     max-width: 100%;
@@ -88,7 +89,7 @@
 
 .callback__content h2 {
   display: block;
-  margin: 0 0 20px 0;
+  margin: 0 0 8px 0;
   padding: 0;
   font-size: 36px;
   line-height: 51px;
@@ -114,6 +115,7 @@
   font-size: 16px;
   line-height: 22px;
   color: $white;
+  transform: translate(4px, 1px);
 
   @include ptmono;
 }
@@ -123,7 +125,7 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: min-content 1fr min-content;
   grid-column-gap: 30px;
-  grid-row-gap: 40px;
+  grid-row-gap: 33px;
 
   @media (max-width: 767px) {
     display: flex;
@@ -135,7 +137,7 @@
   width: 100%;
   background: #{'hsla(0 0% 100% / 10%)'};
   border: 0;
-  padding: 22px 14px;
+  padding: 17px 24px;
   font-size: 16px;
   line-height: 22px;
   color: $white;
@@ -169,6 +171,7 @@
   line-height: 22px;
   color: $white;
   opacity: 1;
+  margin: 0 0 10px 0;
 
   @include ptmono;
 
