@@ -1,5 +1,5 @@
 .about {
-  margin: 0 0 113px 0;
+  margin: 0 0 118px 0;
 
   @media (max-width: 1023px) {
     margin: 0 0 70px 0;
@@ -7,7 +7,7 @@
 }
 
 .about__wrapper {
-  padding: 46px 16% 0;
+  padding: 57px 17% 0;
   position: relative;
 
   @media (max-width: 1023px) {
@@ -17,8 +17,8 @@
 
 .about__wrapper picture {
   position: absolute;
-  top: 49px;
-  left: 17%;
+  top: 56px;
+  left: 18%;
   z-index: -1;
 
   @media (max-width: 1023px) {
@@ -77,9 +77,9 @@
   display: grid;
   grid-template-rows: auto auto;
   grid-template-columns: 1fr;
-  grid-row-gap: 25px;
+  grid-row-gap: 24px;
   display: block;
-  margin: 0 0 46px 0;
+  margin: 0 0 43px 0;
   padding: 0;
   font-size: 16px;
   line-height: 22px;

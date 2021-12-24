@@ -5,12 +5,12 @@
 }
 
 .page-footer__wrapper {
-  padding: 66px 12% 0;
+  padding: 62px 13% 0;
   display: grid;
   grid-template-columns: min-content 1fr;
   grid-template-rows: 1fr min-content;
   grid-row-gap: 40px;
-  grid-column-gap: 186px;
+  grid-column-gap: 184px;
 
   @media (max-width: 1023px) {
     display: flex;

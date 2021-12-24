@@ -1,8 +1,9 @@
 .footer-navigation__wrapper {
   display: grid;
-  grid-template-columns: 0.7fr 0.6fr;
+  grid-template-columns: .9fr .6fr;
   grid-template-rows: min-content 1fr;
-  grid-column-gap: 52px;
+  grid-column-gap: 100px;
+  transform: translate(34px, -2px);
 
   @media (max-width: 767px) {
     display: flex;
@@ -29,15 +30,6 @@
     bottom: 22px;
     left: -121px;
   }
-}
-
-.footer-navigation__wrapper h3 {
-  display: block;
-  padding-left: 35px;
-}
-
-.footer-navigation__wrapper div {
-  padding-left: 34px;
 }
 
 .footer-navigation__wrapper h3:first-of-type {

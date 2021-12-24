@@ -33,7 +33,7 @@
 
 .page-header__wrapper {
   width: 100%;
-  padding: 32px 12% 0;
+  padding: 32px 13% 0;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -52,8 +52,8 @@
   background-image: url("../img/decoration-promo-desktop.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
-  top: -3px;
-  right: 390px;
+  top: -2px;
+  right: 260px;
 
   @media (max-width: 1023px) {
     background-image: url("../img/decoration-promo-tablet.svg");
@@ -75,7 +75,7 @@
 .page-header__picture {
   position: absolute;
   top: 253px;
-  right: 307px;
+  right: 183px;
   z-index: 2;
 
   @media (max-width: 1023px) {
@@ -138,9 +138,9 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  width: 77%;
+  width: 85%;
   justify-content: flex-end;
-  transform: translate(8px, -4px);
+  transform: translate(1px, -4px);
 
   @media (max-width: 1023px) {
     width: auto;

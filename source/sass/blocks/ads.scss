@@ -26,12 +26,12 @@
 }
 
 .ads__wrapper {
-  padding: 113px 18% 0;
+  padding: 113px 20% 0;
   display: grid;
-  grid-template-columns: 43% 43%;
+  grid-template-columns: 49% 49%;
   grid-template-rows: 1fr 1fr;
-  gap: 34px;
-  transform: translate(3px, -8px);
+  gap: 30px;
+  transform: translate(-7px, -9px);
 
   @media (max-width: 1023px) {
     padding: 100px 4% 0;
@@ -68,7 +68,7 @@
 
 .ads__wrapper div {
   cursor: pointer;
-  padding: 44px 41px 73px 41px;
+  padding: 43px 36px 67px 39px;
   border: 1px solid $grey-light;
   border-left: 3px solid $blue;
   background-color: $white;
@@ -93,7 +93,30 @@
 
 .ads__wrapper svg {
   fill: $blue;
-  margin: 0 0 15px 0;
+}
+
+.ads__time svg {
+  width: 29px;
+  height: 35px;
+  margin: 0 0 20px 0;
+}
+
+.ads__suppliers svg {
+  width: 35px;
+  height: 35px;
+  margin: 0 0 20px 0;
+}
+
+.ads__private svg {
+  width: 36px;
+  height: 31px;
+  margin: 0 0 20px;
+}
+
+.ads__price svg {
+  width: 35px;
+  height: 35px;
+  margin: 0 0 16px;
 }
 
 .ads__wrapper span {
