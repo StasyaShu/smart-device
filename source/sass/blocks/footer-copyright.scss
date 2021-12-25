@@ -4,6 +4,10 @@
   position: relative;
   margin: 34px 0 0 0;
 
+  @media (max-width: 1023px) {
+    margin: 16px 0 0;
+  }
+
   @media (max-width: 767px) {
     margin: 0;
   }

@@ -3,7 +3,7 @@
   position: relative;
 
   @media (max-width: 1023px) {
-    margin: 0 0 30px 0;
+    margin: 0;
   }
 }
 
@@ -34,8 +34,9 @@
   transform: translate(-7px, -9px);
 
   @media (max-width: 1023px) {
-    padding: 100px 4% 0;
+    padding: 62px 4% 0;
     position: relative;
+    grid-template-rows: 52% 39%;
   }
 
   @media (max-width: 767px) {
@@ -72,6 +73,10 @@
   border: 1px solid $grey-light;
   border-left: 3px solid $blue;
   background-color: $white;
+
+  @media (max-width: 1023px) {
+    padding: 24px;
+  }
 }
 
 .ads__wrapper div:hover {
@@ -98,25 +103,41 @@
 .ads__time svg {
   width: 29px;
   height: 35px;
-  margin: 0 0 20px 0;
+  margin: 0 0 20px;
+
+  @media (max-width: 1023px) {
+    margin: 0 0 5px;
+  }
 }
 
 .ads__suppliers svg {
   width: 35px;
   height: 35px;
-  margin: 0 0 20px 0;
+  margin: 0 0 20px;
+
+  @media (max-width: 1023px) {
+    margin: 0 0 5px;
+  }
 }
 
 .ads__private svg {
   width: 36px;
   height: 31px;
   margin: 0 0 20px;
+
+  @media (max-width: 1023px) {
+    margin: 0 0 16px;
+  }
 }
 
 .ads__price svg {
   width: 35px;
   height: 35px;
   margin: 0 0 16px;
+
+  @media (max-width: 1023px) {
+    margin: 0 0 13px;
+  }
 }
 
 .ads__wrapper span {
@@ -128,6 +149,10 @@
   color: $blue;
 
   @include roboto-regular;
+
+  @media (max-width: 1023px) {
+    margin: 0 0 10px;
+  }
 
   @media (max-width: 767px) {
     font-size: 20px;

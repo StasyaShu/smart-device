@@ -3,8 +3,12 @@
   background-color: $blue;
   padding: 95px 0 113px;
 
+  @media (max-width: 1023px) {
+    padding: 95px 0 91px;
+  }
+
   @media (max-width: 767px) {
-    padding: 23px 0 37px 0;
+    padding: 23px 0 37px;
   }
 }
 
@@ -22,7 +26,8 @@
 
   @media (max-width: 1023px) {
     flex-direction: column;
-    padding: 0 8% 0;
+    padding: 0 12%;
+    transform: translate(14px, 2px);
   }
 
   @media (max-width: 767px) {
@@ -84,6 +89,7 @@
 
   @media (max-width: 1023px) {
     max-width: 100%;
+    transform: translate(-19px,-15px);
   }
 }
 
@@ -99,8 +105,9 @@
   @include roboto-regular;
 
   @media (max-width: 1023px) {
-    font-size: 36px;
+    font-size: 32px;
     line-height: 45px;
+    margin: 0 0 9px 0;
   }
 
   @media (max-width: 767px) {
@@ -131,6 +138,7 @@
   @media (max-width: 767px) {
     display: flex;
     flex-direction: column;
+    grid-row-gap: 40px;
   }
 }
 
@@ -175,6 +183,10 @@
   margin: 0 0 10px 0;
 
   @include ptmono;
+
+  @media (max-width: 1023px) {
+    margin: 0 0 27px 0;
+  }
 
   @media (max-width: 767px) {
     height: 104px;
