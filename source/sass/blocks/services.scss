@@ -39,11 +39,10 @@
 
   @media (max-width: 1023px) {
     margin: 0 0 50px;
-    transform: translate(0, 0);
     font-size: 32px;
     line-height: 45px;
     width: 86%;
-    transform: translate(-3px, 0px);
+    transform: translate(-3px, 0);
   }
 
   @media (max-width: 767px) {
