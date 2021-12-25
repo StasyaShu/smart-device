@@ -42,6 +42,9 @@
   @media (max-width: 767px) {
     display: flex;
     flex-direction: column;
+    padding: 65px 6% 0;
+    gap: 26px;
+    transform: translate(-6px, -14px);
   }
 }
 
@@ -76,6 +79,11 @@
 
   @media (max-width: 1023px) {
     padding: 24px;
+  }
+
+  @media (max-width: 767px) {
+    padding: 13px 9px 40px 26px;
+    border-left: 2px solid $blue;
   }
 }
 
@@ -128,6 +136,10 @@
   @media (max-width: 1023px) {
     margin: 0 0 16px;
   }
+
+  @media (max-width: 767px) {
+    margin: 0 0 4px;
+  }
 }
 
 .ads__price svg {
@@ -156,6 +168,7 @@
 
   @media (max-width: 767px) {
     font-size: 20px;
+    margin: 0 0 8px;
   }
 }
 

@@ -54,6 +54,7 @@
 
   @media (max-width: 1023px) {
     font-size: 18px;
+    line-height: 25px;
     max-width: 356px;
     margin: 0 0 54px 47px;
     transform: translate(5px,7px);
@@ -61,7 +62,10 @@
 
   @media (max-width: 767px) {
     font-size: 16px;
+    line-height: 25px;
     min-width: 245px;
+    margin: 0 0 50px 47px;
+    transform: translate(2px, 9px);
   }
 }
 

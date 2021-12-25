@@ -85,13 +85,14 @@
     height: 0;
     overflow: hidden;
     transition: height 1s;
-    margin: 0 0 50px 0;
+    margin: 0 0 55px 0;
+    width: 83%;
   }
 }
 
 .footer-navigation__tab--nojs {
   @media (max-width: 767px) {
-    height: auto;
+    height: 150px;
     overflow: auto;
     transition: none;
   }
@@ -119,8 +120,8 @@
   @media (max-width: 767px) {
     content: "";
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 2px;
+    right: 23px;
     display: block;
     width: 16px;
     height: 16px;
@@ -163,8 +164,8 @@
   @media (max-width: 767px) {
     content: "";
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 2px;
+    right: 23px;
     display: block;
     width: 17px;
     height: 2px;

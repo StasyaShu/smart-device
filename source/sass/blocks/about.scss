@@ -4,6 +4,10 @@
   @media (max-width: 1023px) {
     margin: 0 0 86px 0;
   }
+
+  @media (max-width: 767px) {
+    margin: 0 0 70px 0;
+  }
 }
 
 .about__wrapper {
@@ -71,6 +75,7 @@
 
   @media (max-width: 767px) {
     font-size: 28px;
+    line-height: 40px;
   }
 }
 
@@ -95,6 +100,7 @@
 
   @media (max-width: 767px) {
     grid-row-gap: 40px;
+    margin: 0 0 33px;
   }
 }
 

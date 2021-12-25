@@ -8,7 +8,7 @@
   }
 
   @media (max-width: 767px) {
-    padding: 23px 0 37px;
+    padding: 44px 0 37px;
   }
 }
 
@@ -126,6 +126,10 @@
   transform: translate(4px, 1px);
 
   @include ptmono;
+
+  @media (max-width: 767px) {
+    margin: 0 0 21px 0;
+  }
 }
 
 .callback__content form {
@@ -139,6 +143,10 @@
     display: flex;
     flex-direction: column;
     grid-row-gap: 40px;
+  }
+
+  @media (max-width: 767px) {
+    grid-row-gap: 25px;
   }
 }
 
@@ -190,6 +198,7 @@
 
   @media (max-width: 767px) {
     height: 104px;
+    margin: 0 0 14px 0;
   }
 }
 
