@@ -1,6 +1,6 @@
 .services {
   background-color: $dark;
-  padding: 88px 0 134px;
+  padding: 88px 0 128px;
 
   @media (max-width: 1023px) {
     padding: 53px 0 78px 0;
@@ -10,7 +10,7 @@
 .services__wrapper {
   padding: 0 19% 0;
   width: 100%;
-  transform: translate(10px,4px);
+  transform: translate(10px, 4px);
 
   @media (max-width: 1023px) {
     padding: 0 3% 0;
@@ -24,6 +24,7 @@
   font-size: 36px;
   line-height: 51px;
   color: $white;
+  transform: translate(-1px, -4px);
 
   @include roboto-regular;
 }
@@ -89,8 +90,8 @@
   display: block;
   max-width: 170px;
   position: absolute;
-  top: 51px;
-  left: 47px;
+  top: 46px;
+  left: 43px;
   font-size: 20px;
   line-height: 30px;
   color: $white;

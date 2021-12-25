@@ -106,6 +106,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
   padding: 0;
   margin: 0 0 225px 0;
@@ -138,9 +139,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  width: 85%;
-  justify-content: flex-end;
-  transform: translate(1px, -4px);
+  transform: translate(-14px,-1px);
 
   @media (max-width: 1023px) {
     width: auto;
