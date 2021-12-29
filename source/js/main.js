@@ -87,44 +87,41 @@ handlePopup.closePopupOverlay();
 
 // Аккордеон
 
-(function handleAccordion() {
-  window.addEventListener('resize', () => {
-    if (document.documentElement.clientWidth < 767) {
-      const accordion = document.getElementById('accordion');
+const handleAccordion = (() => {
+  const accordion = document.getElementById('accordion');
 
-      if (accordion) {
-        accordion.addEventListener('click', change);
+  if (accordion) {
+    accordion.addEventListener('click', (evt) => {
+      if (document.documentElement.clientWidth < 770) {
 
-        function change(evt) {
-          const targ = evt.target;
-          if (targ.tagName !== 'H3') return;
-
-          if (targ.classList.contains('footer-navigation__item--select')) {
-            hideAll();
-          } else {
-            hideAll();
-            targ.classList.add('footer-navigation__item--select');
-            showText(targ.nextElementSibling);
-          }
-        }
-
-        function hideAll() {
+        const hideAll = () => {
           const h3El = accordion.querySelectorAll('h3');
           const divEl = accordion.querySelectorAll('div');
-          for (var i = 0; i < h3El.length; i++) {
+          for (let i = 0; i < h3El.length; i++) {
             h3El[i].classList.remove('footer-navigation__item--select');
           }
-          for (var i = 0; i < divEl.length; i++) {
+          for (let i = 0; i < divEl.length; i++) {
             divEl[i].style.height = '0';
           }
         }
 
-        function showText(textEl) {
+        const showText = (textEl) => {
           textEl.style.height = textEl.scrollHeight + 'px';
         }
+
+        const targ = evt.target;
+        if (targ.tagName !== 'H3') return;
+
+        if (targ.classList.contains('footer-navigation__item--select')) {
+          hideAll();
+        } else {
+          hideAll();
+          targ.classList.add('footer-navigation__item--select');
+          showText(targ.nextElementSibling);
+        }
       }
-    }
-  })
+    })
+  }
 })();
 
 // Плавный скролл
