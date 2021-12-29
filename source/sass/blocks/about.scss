@@ -103,11 +103,11 @@
   }
 }
 
-.about__details span:nth-child(0n+1) {
+.about__details span:not(:last-child) {
   display: block;
 }
 
-.about__details span:nth-child(0n+2) {
+.about__details span:first-child + span {
   display: block;
 
   @media (max-width: 1023px) {

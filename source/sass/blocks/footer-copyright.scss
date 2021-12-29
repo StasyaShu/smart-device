@@ -52,7 +52,7 @@
   @include ptmono;
 }
 
-.footer-copyright__wrapper span:nth-child(0n+1) {
+.footer-copyright__wrapper span:first-child {
   margin: 0 78px 0 0;
 
   @media (max-width: 1023px) {
@@ -60,7 +60,7 @@
   }
 }
 
-.footer-copyright__wrapper span:nth-child(0n+2) {
+.footer-copyright__wrapper span:first-child + span {
   margin: 0 146px 0 0;
 
   @media (max-width: 1023px) {
@@ -68,7 +68,7 @@
   }
 }
 
-.footer-copyright__wrapper span:nth-child(0n+3) {
+.footer-copyright__wrapper span:nth-child(2n+1) {
   @media (max-width: 767px) {
     margin: 0 0 25px 0;
   }

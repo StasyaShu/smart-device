@@ -154,18 +154,6 @@
   cursor: pointer;
 }
 
-.page-header__contacts a:nth-child(0n+2) {
-  margin-left: 86px;
-
-  @media (max-width: 1023px) {
-    margin-left: 35px;
-  }
-
-  @media (max-width: 767px) {
-    margin-left: 20px;
-  }
-}
-
 .page-header__link {
   display: flex;
   flex-wrap: wrap;
@@ -197,6 +185,18 @@
   @media (max-width: 1023px) {
     width: 26px;
     height: 19px;
+  }
+}
+
+.page-header__link--phone {
+  margin-left: 86px;
+
+  @media (max-width: 1023px) {
+    margin-left: 35px;
+  }
+
+  @media (max-width: 767px) {
+    margin-left: 20px;
   }
 }
 
