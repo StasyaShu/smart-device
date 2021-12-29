@@ -122,7 +122,8 @@ const handleAccordion = (() => {
       }
     })
   }
-})();
+})()
+window.addEventListener('resize', handleAccordion);
 
 // Плавный скролл
 
