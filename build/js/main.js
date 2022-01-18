@@ -90,40 +90,68 @@ handlePopup.closePopupOverlay();
 const handleAccordion = (() => {
   const accordion = document.getElementById('accordion');
 
-  if (accordion) {
-    accordion.addEventListener('click', (evt) => {
-      if (document.documentElement.clientWidth < 770) {
+  const hideAll = () => {
+    const h3El = accordion.querySelectorAll('h3');
+    const divEl = accordion.querySelectorAll('div');
 
-        const hideAll = () => {
-          const h3El = accordion.querySelectorAll('h3');
-          const divEl = accordion.querySelectorAll('div');
-          for (let i = 0; i < h3El.length; i++) {
-            h3El[i].classList.remove('footer-navigation__item--select');
+    for (let i = 0; i < h3El.length; i++) {
+      h3El[i].classList.remove('footer-navigation__item--select');
+    }
+    for (let i = 0; i < divEl.length; i++) {
+      divEl[i].style.height = '0';
+    }
+  }
+
+  const showText = (textEl) => {
+    textEl.style.height = textEl.scrollHeight + 'px';
+  }
+
+  const showAll = () => {
+    const h3El = accordion.querySelectorAll('h3');
+    const divEl = accordion.querySelectorAll('div');
+
+    for (let i = 0; i < h3El.length; i++) {
+      h3El[i].classList.remove('footer-navigation__item--select');
+    }
+    for (let i = 0; i < divEl.length; i++) {
+      divEl[i].style.height = null;
+    }
+  }
+
+  return {
+
+    manageAccordion: () => {
+      if (accordion) {
+        accordion.addEventListener('click', (evt) => {
+
+          if (document.documentElement.clientWidth < 770) {
+            const targ = evt.target;
+            if (targ.tagName !== 'H3') return;
+
+            if (targ.classList.contains('footer-navigation__item--select')) {
+              hideAll();
+            } else {
+              hideAll();
+              targ.classList.add('footer-navigation__item--select');
+              showText(targ.nextElementSibling);
+            }
           }
-          for (let i = 0; i < divEl.length; i++) {
-            divEl[i].style.height = '0';
-          }
-        }
-
-        const showText = (textEl) => {
-          textEl.style.height = textEl.scrollHeight + 'px';
-        }
-
-        const targ = evt.target;
-        if (targ.tagName !== 'H3') return;
-
-        if (targ.classList.contains('footer-navigation__item--select')) {
-          hideAll();
-        } else {
-          hideAll();
-          targ.classList.add('footer-navigation__item--select');
-          showText(targ.nextElementSibling);
-        }
+        })
       }
-    })
+    },
+
+    stopAccordion: () => {
+      showAll();
+    }
   }
 })()
-window.addEventListener('resize', handleAccordion);
+window.addEventListener('resize', () => {
+  if (document.documentElement.clientWidth < 770) {
+    handleAccordion.manageAccordion();
+  } else {
+    handleAccordion.stopAccordion();
+  }
+});
 
 // Плавный скролл
 
